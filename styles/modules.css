@@ -1,0 +1,12 @@
+
+.fa-image, .fa-bars {
+    font-size: x-large;
+}
+
+.fa-bars {
+    padding: 20px 20px 0px 0px;
+}
+
+.fa-image {
+    padding: 20px 0px 0px 20px;
+}
