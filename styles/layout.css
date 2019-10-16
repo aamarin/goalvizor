@@ -1,166 +1,74 @@
 
 .grid-container {
-    grid-template-rows: 60px 1fr 1fr 1fr 40px;
+    grid-template-rows: 60px 1fr 40px;
     grid-template-columns: 1fr;
     grid-template-areas:
             "head"
             "main"
-            "main"
-            "main"
             "foot";
+    margin: 0px auto;
 }
 
 .grid-container header {
+    grid-area: head;
     height: 60px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .grid-container main {
-    display: flex;
-    flex-direction: column;
+    grid-area: main;
+    display: grid;
+    grid-auto-rows: 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "img"
+            "teacher"
+            "parent"
+            "gallery"
+            "sign-up";
 }
 
 .grid-container main img {
-    height: 35%;
-    width: 100%;
-    object-fit: cover;
+    grid-area: img;
+    min-width: 320px;
+    max-width: 100%;
+    height: auto;
+    /* object-fit: contain; */
 }
 
-.grid-container main .selection {
-    height: 20%;
+.grid-container main .teacher-info {
+    grid-area: teacher;
     background-color: grey;
 }
 
+.grid-container main .parent-info {
+    grid-area: parent;
+    background-color: grey;
+}
+
+.grid-container main .gallery {
+    grid-area: gallery;
+    background-color: #5A2782;
+}
+
 .grid-container main .sign-up {
-    height: 45%;
+    grid-area: sign-up;
     background-color: white;
 }
 
 .grid-container footer {
+    grid-area: foot;
     height: 40px;
 }
 
 @media (min-width: 460px) {
-    body {
-        max-width: 460px;
-        margin: 0 auto;
-    }
 
-    .grid-container {
-        grid-template-rows: 80px 1fr 1fr 1fr 50px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-                "head"
-                "main"
-                "main"
-                "main"
-                "foot";
-        width: 1024px;
-        margin: 0 auto;
-    }
 
-    .grid-container header {
-        height: 80px;
-    }
-
-    .grid-container footer {
-        height: 50px;
-    }
-    .grid-container main img {
-        height: 35%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .grid-container main .selection {
-        height: 20%;
-        background-color: grey;
-    }
-
-    .grid-container main .sign-up {
-        height: 45%;
-        background-color: white;
-    }
-
-    .grid-container main {
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 @media (min-width: 1025px) {
-    body {
-        max-width: 1025px;
-        margin: 0 auto;
-    }
 
-    .grid-container {
-        display: grid;
-        grid-template-rows: 1fr 1fr 0.5fr;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-                "head"
-                "main"
-                "foot";
-        height: 100vh;
-        gap: 0px 0px;
-    }
 
-    .grid-container header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        grid-area: head;
-    }
-
-    .grid-container main {
-        grid-area: main;
-    }
-
-    .grid-container footer {
-        grid-area: foot;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .grid-container {
-        grid-template-rows: 80px 1fr 1fr 1fr 50px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-                "head"
-                "main"
-                "main"
-                "main"
-                "foot";
-        width: 960px;
-        margin: 0 auto;
-    }
-
-    .grid-container header {
-        height: 80px;
-    }
-
-    .grid-container footer {
-        height: 50px;
-    }
-    .grid-container main img {
-        height: 35%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .grid-container main .selection {
-        height: 20%;
-        background-color: grey;
-    }
-
-    .grid-container main .sign-up {
-        height: 45%;
-        background-color: white;
-    }
-
-    .grid-container main {
-        display: flex;
-        flex-direction: column;
-    }
 }
