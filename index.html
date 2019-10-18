@@ -17,11 +17,18 @@
         </nav>
     </header>
     <main>
-        <img src="hero_img.jpg" alt="Photo of a child">
+        <img srcset="hero-img-318w.jpg 318w,
+                    hero-img-636w.jpg 636w"
+            sizes="(max-width: 320px) 280px,
+                    600px"
+            src="hero_img-636w.jpg" alt="Photo of a child">
         <div class="teacher-info"></div>
         <div class="parent-info"></div>
         <div class="gallery"></div>
-        <div class="sign-up"></div>
+        <div class="sign-up">
+            <h1>GoalVizor</h1>
+            <p>Track your child's progress</p>
+        </div>
     </main>
     <footer>
        <p>&copy Marin Ventures LLC</p>

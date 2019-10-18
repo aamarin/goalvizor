@@ -1,11 +1,10 @@
-body, form{
+body, form {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #5A2782;
-    color: white;
-    min-width: 320px;
+    background-color: rgba(211, 211, 211, 0.945);
+    margin: 0px auto;
 }
