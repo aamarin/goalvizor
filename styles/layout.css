@@ -38,23 +38,34 @@
     grid-area: img;
     min-width: 320px;
     max-width: 100%;
-    height: auto;
+    height: fit-content;
+}
+
+.grid-container main .teacher-info, .parent-info {
+    background-color: grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-container main .teacher-info {
     grid-area: teacher;
-    background-color: grey;
-    border-right: solid;
+    border-bottom: 1px solid white;
 }
 
 .grid-container main .parent-info {
     grid-area: parent;
-    background-color: grey;
 }
 
 .grid-container main .gallery {
     grid-area: gallery;
     background-color: #5A2782;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-container main .sign-up {
@@ -74,6 +85,7 @@
     justify-content: center;
     align-content: center;
     background-color: #5A2782;
+    border-top: 1px solid white;
 }
 
 form {
@@ -85,14 +97,6 @@ form {
 .form-submit input {
     background-color: #5A2782;
     color: white
-}
-
-.teacher-info, .parent-info {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 @media (min-width: 640px) {
@@ -108,6 +112,13 @@ form {
                 "teacher   teacher  parent   parent";
     }
 
+    .grid-container main .teacher-info {
+        border-right: 1px solid white;
+    }
+
+    .grid-container main .teacher-info {
+        border-bottom: none; /* Undo mobile layout */
+    }
 }
 
 @media (min-width: 1025px) {
@@ -121,5 +132,9 @@ form {
                 "img       img      sign-up  sign-up"
                 "gallery   gallery  gallery  gallery"
                 "teacher   teacher  parent   parent";
+    }
+
+    .grid-container footer {
+        border-top: none;
     }
 }
