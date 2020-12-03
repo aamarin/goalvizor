@@ -6,9 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GoalVizor</title>
     <script src="https://kit.fontawesome.com/fd8a70ab0a.js" crossorigin="anonymous"></script>
-    <!-- Start of alexamarin Zendesk Widget script -->
+    <!-- Start of alexamarin Zendesk Widget script
     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=e52ad92b-8d56-42e5-82d7-55ffd9b299e0"> </script>
-    <!-- End of alexamarin Zendesk Widget script -->
+End of alexamarin Zendesk Widget script -->
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "ddcdfc17-1edc-4091-a775-d635c2601a41", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "e019a675-7afe-4cbb-92c0-cb34e0435579", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
